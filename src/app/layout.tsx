@@ -56,12 +56,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "/",
     siteName: "Hanmanth Patil Portfolio",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Hanmanth Patil — AI/ML Engineer & Creative Technologist",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Hanmanth Patil — AI/ML Engineer & Creative Technologist",
     description:
       "Personal portfolio of Hanmanth Patil. Building intelligent, human-centered systems across artificial intelligence, machine learning, software engineering, robotics, and product design.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
