@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import { personalInfo } from "@/lib/content";
 import "./globals.css";
@@ -131,6 +132,18 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} scroll-smooth`}
     >
       <body className="bg-background text-text-primary font-sans antialiased min-h-screen selection:bg-accent-cyan/20 selection:text-text-primary">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-YRKPBJ3843"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YRKPBJ3843');
+          `}
+        </Script>
         {/* Structured Data (Schema.org JSON-LD) */}
         <script
           type="application/ld+json"
